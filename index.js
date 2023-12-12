@@ -5,6 +5,7 @@ require("dotenv").config();
 const app = express();
 const API = process.env.API_ENDPOINT;
 const PORT = process.env.PORT || 3000;
+const DIVIDE_BY = `1e${process.env.COIN_DECIMALS || 1}`;
 
 async function fetchData(endpoint) {
   try {
@@ -20,7 +21,7 @@ async function fetchTotalSupply() {
   const data = await fetchData(
     `/cosmos/bank/v1beta1/supply/${process.env.COIN_DENOM}`
   );
-  return data.amount.amount;
+  return data.amount.amount / DIVIDE_BY;
 }
 
 async function fetchCirculatingSupply() {
@@ -28,7 +29,7 @@ async function fetchCirculatingSupply() {
     await fetchData("/cosmos/distribution/v1beta1/community_pool")
   ).pool[0].amount;
   const totalSupply = await fetchTotalSupply();
-  return totalSupply - communityPool;
+  return totalSupply - communityPool / DIVIDE_BY;
 }
 
 app.get("/total-supply", async (_, res) => {
