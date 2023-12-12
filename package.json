@@ -1,0 +1,14 @@
+{
+  "name": "cosmos-supply-endpoints",
+  "version": "1.0.0",
+  "description": "A simple Node implementation to get the circulating supply and total supply for Cosmos-based ecosystems.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.17.1"
+  }
+}
