@@ -1,5 +1,5 @@
 # Cosmos Supply Endpoints
-A simple Node implementation to get the circulating supply and total supply for Cosmos-based ecosystems.
+A simple Node implementation that creates endpoints for the circulating supply and the total supply using the Cosmos SDK API.
 
 ## Installation (Local)
 
