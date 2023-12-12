@@ -2,7 +2,7 @@
 
 A simple Node implementation that creates endpoints for the circulating supply and the total supply using the Cosmos SDK API.
 
-This has been written by ZENODE and is licensed under the MIT-license (see [LICENSE.md](./LICENSE.md)).
+This has been written by ZENODE and is licensed under the MIT-license (see [LICENSE](./LICENSE)).
 
 ## Installation (Local)
 1. First create an `.env` file in the root of the repository.
