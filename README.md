@@ -1,6 +1,6 @@
 # Cosmos Supply Endpoints
 
-A simple Node implementation that creates endpoints for the circulating supply and the total supply using the Cosmos SDK API. Useful for platforms like CoinMarketCap or CoinGecko.
+A simple Node.js project that creates endpoints for the circulating supply and the total supply using the Cosmos SDK API. Useful for platforms like CoinMarketCap or CoinGecko.
 
 This has been written by ZENODE and is licensed under the MIT-license (see [LICENSE](./LICENSE)).
 
