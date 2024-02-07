@@ -1,4 +1,5 @@
 const axios = require("axios");
+const cors = require("cors");
 const express = require("express");
 require("dotenv").config();
 
@@ -6,6 +7,9 @@ const app = express();
 const API = process.env.API_ENDPOINT;
 const PORT = process.env.PORT || 3000;
 const DIVIDE_BY = `1e${process.env.COIN_DECIMALS || 1}`;
+
+// Use cors middleware to enable CORS
+app.use(cors());
 
 async function fetchData(endpoint) {
   try {
