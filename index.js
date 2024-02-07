@@ -35,18 +35,18 @@ async function fetchCirculatingSupply() {
 app.get("/total-supply", async (_, res) => {
   try {
     const totalSupply = await fetchTotalSupply();
-    res.send(`<html><head></head><body>${totalSupply}</body></html>`);
+    res.json(totalSupply);
   } catch (error) {
-    res.status(500).send("Internal Server Error");
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
 app.get("/circulating-supply", async (_, res) => {
   try {
     const circulatingSupply = await fetchCirculatingSupply();
-    res.send(`<html><head></head><body>${circulatingSupply}</body></html>`);
+    res.json(circulatingSupply);
   } catch (error) {
-    res.status(500).send("Internal Server Error");
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
